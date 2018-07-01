@@ -1,0 +1,594 @@
+/*!
+Theme Name: StormGuard
+Theme URI: http://underscores.me/
+Author: Alex.Y
+Author URI: http://underscores.me/
+Description: Beetroot Test Task
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: stormguard
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+StormGuard is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+// @import "variables-site/variables-site";
+// @import "variables-site/_colors";
+// @import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+// @import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+// @import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+// @import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+// @import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+// @import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+// @import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+// @import "modules/alignments";
+// 
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+// @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+// @import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+// @import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+// @import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+// @import "media/media";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
+// @import "reset";
+// Variables
+#html, body {
+	margin: 0px !important;
+	padding: 0;
+}
+.form-control, a, button, input {
+	border-radius: 0px !important;
+}
+
+$primary_color: #db302c;
+$secondary_color: #ffdd00;
+
+// Buttons 
+.secondary-btn {
+	background-color: $secondary_color;
+	font-family: 'HelveticaBold';
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	border-radius: 0px;
+	transition: .2s ease-in;
+	&:hover {
+		background: #000;
+		color: #fff;
+	}
+}
+.primary-btn {
+	background-color: $primary_color;
+	font-family: 'HelveticaBold';
+	font-size: 18px;
+	font-weight: bold;
+}
+.main_heading {
+	font-size: 32px;
+	font-family: "Eurostile LT - Demi";
+	font-weight: 400;
+	color: $primary_color;
+	text-align: center;
+}
+.main_description {
+	font-family: Helvetica;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+}
+header #top_bar {
+	background: #000;
+	padding: 20px 0px 22px;
+	.find_location {
+		color: $secondary_color;
+		display: inline;
+		font-size: 14px;
+		cursor: pointer;
+		&:after {
+			content: ' >';
+			font-size: 14px;
+		}
+	}
+	.top_menu {
+		justify-content: flex-end;
+		.top_menu_list {
+			float: right;
+		}
+		ul {
+			list-style-type: none;
+			li {
+				padding: 0px 11px;
+			&:hover, &:focus {
+				opacity: 0.7;
+			}
+				a {
+					text-decoration: none;
+					color: #fff;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.main_navigation{
+	background: rgba(0,0,0,0.7);
+	z-index: 2;
+	ul {
+		justify-content: flex-end;
+		li {
+			a {
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+	}
+	.header_main_menu  {
+		justify-content: flex-end;
+	}
+}
+.header_image {
+	position: relative;
+	top: -99px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 559px;
+	z-index: 1;
+	background-size: cover;
+	.contact_heading_block {
+		position: absolute;
+		top: 30%;
+		left: 10%;
+		background: rgba(0,0,0,0.7);
+		color: #fff;
+		padding: 0px 0px 0px 30px;
+		z-index: 99999999999;
+		span{
+			color: $secondary_color;
+		}
+		.heading_block_description {
+			font-size: 34px;
+			font-family: "Eurostile LT Std - Demi", sans-serif;
+			white-space: wrap;
+			font-weight: 400;
+			margin: 63px 73px 0px 0px;
+		}
+		.heading_block_link {
+			font-family: Helvetica;
+			font-size: 16px;
+			font-weight: 700;
+			background: $secondary_color;
+			color: #000;
+			text-decoration: none;
+			padding: 20px 25px;
+			margin-bottom: 36px;
+			display: inline-block;
+			transition: .2s ease-in;
+			&:after {
+				content: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/shape-2-copy.png');
+				padding-left: 15px;
+			}
+			&:hover {
+				background: rgba(0,0,0,0.7);
+				color: $secondary_color;
+			}
+		}
+	}
+}
+.header_image_second {
+	height: 229px;
+	position: relative;
+	top: -98px;
+}
+// Homepage Styles Here
+.franchise-wrapper {
+	background: $secondary_color;
+	margin-top: -100px;
+	padding: 34px 0px 40px 0px;
+	p {
+		margin: 0px;
+	}
+	.franchise_title {
+		font-size: 38px;
+		line-height: 34px;
+	}
+	.franchise_description {
+		font-size: 16px;
+		margin: 0 9%;
+	}
+	.franchise_location_icon {
+		float: left;
+		margin-right: 25px;
+		pointer-events: none;
+	}
+	.input_zip {
+		padding-right: 0px;
+		input {
+			border-radius: 0px;
+			padding: 10px 0px 10px 3px;
+		}
+	}
+	.zip_submit {
+		padding-left: 0px;
+		button {
+			border-radius: 0px;
+			font-size: 18px;
+			padding: 7px 19px;
+		}
+	}
+}
+.offerings_block {
+	margin-top: 48px;
+	&--bordered {
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.container {
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.main_heading {
+		margin-bottom: 0;
+	}
+	.offer-block {
+		text-align: center;
+		.offering_title {
+			margin-top: 5px;
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+		.offering_description {
+			margin-top: 0;
+		}
+	}
+	span {
+		display: block;
+		text-align: center;
+		a.btn {
+			background: $secondary_color;
+			color: #000;
+			text-decoration: none;
+			font-weight: 700;
+			padding: 12px 39px;
+			border-radius: 0px;
+			transition: .2s ease-in;
+			margin-bottom: 37px;
+			&:hover {
+				background: #000;
+				color: #fff;
+			}
+		}
+	}	
+}
+// Get Started Styles
+.get_started {
+	margin-top: 37px;
+	.service_overlay {
+		height: 244px;
+		background: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/service1.png') center center no-repeat;
+		background-size: cover;
+		&--second {
+			background: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/service2.png') center center no-repeat;
+			background-size: cover;
+		}
+		&--third {
+			background: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/service3.png') center center no-repeat;
+			background-size: cover;
+		}
+	}
+	span {
+		background: $secondary_color;
+		width: 100%;
+		display: inline-block;
+		text-align: left;
+		padding: 12px 0px 9px 18px;
+		a {
+			color: #000;
+			font-weight: 700;
+			text-decoration: none;
+			&:after {
+				content: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/shape-2-copy.png');
+				padding-left: 10px;
+			}
+		}
+	}
+}
+// Testimonials Section Styles
+.testimonials {
+	margin-top: 52px;
+	background-color: #f7f8f8;
+	.main_heading {
+		padding-top: 50px;
+	}
+	.testimonial {
+		background: #fff;
+		p {
+			font-style: italic;
+		}
+	}
+	.dots {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		margin-top: 64px;
+		margin-bottom: 34px;
+		ul {
+			display: inline;
+			list-style-type: none;
+			margin: 0 auto;
+			li {
+				display: inline;
+				margin: 0px 5px;
+				button {
+					border: 1px solid #d7d7d7;
+					border-radius: 7px !important;
+					background: #000;
+					width: 14px;
+					height: 14px;
+					outline: none;
+					font-size: 0;
+					&:active, &:focus {
+						background: grey;
+					}
+				}
+			}
+		}
+	}
+}
+// LATEST NEWS STYLES
+.latest_news {
+	.main_heading {
+		margin-top: 20px;
+	}
+	.news_image {
+		background: url('http://localhost:8080/stormguard/wp-content/themes/stormguard/stormguard/img/article_img.png') center center no-repeat;
+		height: 276px;
+	}
+	.article_title {
+		font-family: "Eurostile LT - Demi";
+		font-size: 28px;
+		font-weight: 400;
+	}
+	.article_excerpt {
+		font-family: Helvetica;
+		line-height: 24px;
+		font-size: 16px;
+		font-weight: 400;
+		.read_more_link {
+			color: $primary_color;
+			margin-left: 4px;
+			text-decoration: underline;
+		}
+	}
+	.article_author {
+		font-family: Helvetica;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		border: 1px solid #e1e1e1;
+		padding: 6px 16px;
+		display: block;
+	}
+	.more_news {
+		display: block;
+		text-align: center;
+		margin-top: 27px;
+		a {
+			padding: 13px 40px;
+		}
+	}
+}
+// Footer Styles Here 
+footer {
+	background: $primary_color;
+	color: #fff;
+	margin-top: 30px;
+	.past_project_image {
+		display: inline-block;
+		margin: 10px 6px 4px 0px;
+	}
+	img {
+		margin: 0;
+		padding: 0;
+	}
+	.contact_us_title {
+		font-size: 32px;
+		font-family: "Eurostile LT - Demi";
+	}
+	.contact_info {
+		font-family: Helvetica;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.past_projects_title {
+		font-family: "Eurostile LT - Demi";
+		font-size: 32px;
+	}
+	.past_projects_description {
+		font-family: Helvetica;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.contact_group {
+		font-family: "Helvetica - Oblique";
+		font-size: 16px;
+		color: #ababab;
+		input {
+			margin: 24px 24px 0px;
+		}
+		&--detail {
+			width: 100%;
+			.contact_detail {
+				margin: 24px 24px 0px;
+				width: 100%;
+				display: inline-block;
+	
+			}
+		}
+	}
+	.form-submit {
+		margin: 3% 78%;
+		display: inline-block;
+		background: #fff;
+		color: $primary_color;
+		padding: 11px 20px;
+	}
+	.more_photos {
+		margin: 12px auto;
+		background: #fff;
+		color: $primary_color;
+	}
+	.form_message {
+		width: 100%;
+		.contact_message {
+			width: 100%;
+			display: block;
+			margin: 24px 24px 0px;
+			padding: 11px 14px;
+
+		}	
+	}
+}
+// Second Footer Styles
+.site-footer {
+	&--second {
+		margin-top: 0px;
+		a.btn {
+			color: $primary_color;
+			background: #fff;
+			display: inline-block;
+			padding: 13px 15px;
+			margin-bottom: 17px;
+			font-family: Helvetica;
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+}
+// Bottom Bar Styles
+.bottom_bar {
+	background: #000;
+	.copyright {
+		font-size: 12px;
+		font-family: Helvetica;
+		color: #f7f8f8;
+		margin: 0;
+	}	
+}
+// Breadcrumbs Styles 
+.breadcrumbs {
+	border-bottom: 1px solid #d4d4d4;
+	ul {
+		li {
+			display: inline;
+			padding: 0px 5px;
+			a {
+				color: $primary_color;
+				text-decoration: underline;
+				&:after {
+					content: ' >';
+				}
+			}
+		}
+	}
+}
+// Single page Styles 
+.article_heading {
+	text-align: left;
+	color: $primary_color;
+}
+// Services Page Styles 
+.services_page	{
+	.col-md-6 {
+		border-bottom: 1px solid #d4d4d4;
+		.article_heading {
+			font-family: "Eurostile LT Std - Demi";
+			font-size: 34px;
+		}
+		.article_img {
+			margin: 15px 0px;
+		}
+	}
+}
